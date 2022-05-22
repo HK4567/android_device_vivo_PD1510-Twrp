@@ -88,7 +88,7 @@ TW_INCLUDE_NTFS_3G := true
 
 # Asian region languages
 TW_EXTRA_LANGUAGES := true
-
+TW_DEFAULT_LANGUAGE := zh_CN
 
 # Debug flags
 TWRP_INCLUDE_LOGCAT := true
