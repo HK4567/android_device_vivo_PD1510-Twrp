@@ -9,5 +9,4 @@
 /oem          ext4          /dev/block/bootdevice/by-name/oem   flags=display="OEM";backup=1;
 /persist        ext4        /dev/block/bootdevice/by-name/persist   flags=display="Persist";backup=1;wipeingui=0
 
-/sdcard         vfat        /dev/block/mmcblk1p1    flags=display="MicroSD";storage;wipeingui;removable
 /external_sd    vfat        /dev/block/mmcblk1p1    flags=display="MicroSD";storage;wipeingui;removable
