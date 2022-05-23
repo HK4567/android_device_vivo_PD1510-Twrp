@@ -63,23 +63,24 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USERIMAGES_USE_F2FS := true
+
+# Extras props
+TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/twrp.fstab
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 TARGET_RECOVERY_QCOM_RTC_FIX := true
-TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 RECOVERY_SDCARD_ON_DATA := true
 
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+TW_CUSTOM_BATTERY_PATH :="/sys/class/power_supply/battery/capacity"
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 162
-TW_NO_SCREEN_BLANK := true
-TW_CUSTOM_BATTERY_PATH :="/sys/class/battery_data/battery_data"
+TW_SCREEN_BLANK_ON_BOOT := true
 
 # Crypto
 TW_INCLUDE_CRYPTO := true
@@ -95,4 +96,3 @@ TW_DEFAULT_LANGUAGE := zh_CN
 
 # Debug flags
 TWRP_INCLUDE_LOGCAT := true
-TARGET_USES_LOGD := true
