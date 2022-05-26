@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2021 The Android Open Source Project
-# Copyright (C) 2021 SebaUbuntu's TWRP device tree generator
+# Copyright (C) 2021 The TWRP Open-Source Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -76,11 +76,10 @@ RECOVERY_SDCARD_ON_DATA := true
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
-TW_CUSTOM_BATTERY_PATH :="/sys/class/power_supply/battery/capacity"
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 162
-TW_SCREEN_BLANK_ON_BOOT := true
+TW_NO_USB_STORAGE := true
 
 # Crypto
 TW_INCLUDE_CRYPTO := true
@@ -95,4 +94,5 @@ TW_EXTRA_LANGUAGES := true
 TW_DEFAULT_LANGUAGE := zh_CN
 
 # Debug flags
+TARGET_USES_LOGD := true
 TWRP_INCLUDE_LOGCAT := true
