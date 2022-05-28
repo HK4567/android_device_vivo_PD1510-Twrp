@@ -1,2 +1,3 @@
 persist.sys.usb.config=mtp,adb
 ro.display.series=vivo Y51A
+ro.adb.secure=1
