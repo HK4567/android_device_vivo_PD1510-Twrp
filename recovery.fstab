@@ -10,5 +10,5 @@ Android fstab file.
 /oem            ext4          /dev/block/bootdevice/by-name/oem           flags=display="OEM";backup=1;
 /recovery       emmc          /dev/block/bootdevice/by-name/recovery      flags=display="Recovery";backup=1
 /system         ext4          /dev/block/bootdevice/by-name/system
-/system_image  emmc	      /dev/block/bootdevice/by-name/system
+/system_image   emmc	      /dev/block/bootdevice/by-name/system
 /external_sd    vfat          /dev/block/mmcblk1p1                        flags=display="MicroSD";storage;wipeingui;removable
