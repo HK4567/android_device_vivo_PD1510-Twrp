@@ -33,12 +33,14 @@ on fs
     chown system drmrpc /dev/qseecom
     chmod 0664 /dev/ion
     chown system system /dev/ion
+    export LD_LIBRARY_PATH /sbin:/system/bin:/vendor/lib:/vendor/lib/hw
+    setprop ro.board.platform msm8916
 
 on property:ro.crypto.state=encrypted
-    start sbinqseecomd
+    start qseecomd
 
 # encryption support
-service sbinqseecomd /system/bin/qseecomd
+service qseecomd /system/bin/qseecomd
     oneshot
     disabled
     user root
